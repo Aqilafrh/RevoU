@@ -1,0 +1,135 @@
+CSS Overview
+CSS (Cascading Style Sheets) is a language used to describe the presentation of an HTML (or XML) document. 
+It controls things like:
+
+//inline css
+<p style="color: blue; font-size: 16px;">This is a paragraph with inline styles.</p>
+
+//Internal (Embedded) CSS:
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <style>
+        p {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a paragraph with internal styles.</p>
+</body
+<html>
+
+//External CSS:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p>This is a paragraph with external styles.</p>
+</body>
+</html>
+
+//styles.css file:
+p {
+    color: red;
+    font-size: 12px;
+}
+
+// CSS Border
+
+The border property is used to add a border around an HTML element. It's a shorthand property that sets the following:
+border-width: The thickness of the border (e.g., 1px, 3px, thin, thick).
+border-style: The style of the border (e.g., solid, dashed, dotted, double, groove, ridge, inset, outset).
+border-color: The color of the border (e.g., black, red, #cccccc).
+You can set these properties individually, or use the shorthand:
+
+/* Shorthand */
+border: 1px solid black;
+
+/* Individual properties */
+border-width: 1px;
+border-style: solid;
+border-color: black;
+
+// website UI : Message Us section
+
+<section id="message-us">
+    <h2>Message Us</h2>
+    <p>We'd love to hear from you!  Send us a message using the form below.</p>
+
+    <form action="process_form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" cols="50"></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+// CSS Styling (External CSS - styles.css):
+
+/* Basic styling for the entire section */
+#message-us {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd; /* Subtle border */
+}
+
+/* Heading style */
+#message-us h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph style */
+#message-us p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Form styling */
+#message-us label {
+    display: block; /* Make labels appear on their own line */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#message-us input[type="text"],
+#message-us input[type="email"],
+#message-us textarea {
+    width: 100%; /* Make input fields take up the full width */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    margin-bottom: 15px;
+}
+
+#message-us button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#message-us button:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+}
+
